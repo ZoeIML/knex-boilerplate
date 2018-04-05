@@ -1,11 +1,20 @@
 const express = require('express')
 
-// include const for your functions file(s)
+// this is the file for functions (separate later if needed):
+const db = require('../db')
 
 const router = express.Router()
 
-// router.get('/', (req, res) => {
+// add routes here
+router.get('/', (req, res) => {
+    db.showHome()
+    .then((results) => {
+        res.render('main', results)
+    })
+    .catch(err => {
+        res.status(500).send('DATABASE ERROR')
+    })
+})
 
-// })
 
 module.exports = router
