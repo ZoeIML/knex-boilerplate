@@ -9,7 +9,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
     db.showHome()
     .then((results) => {
-        res.render('main', results)
+        res.render('index', results)
     })
     .catch(err => {
         res.status(500).send('DATABASE ERROR')
