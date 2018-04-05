@@ -9,13 +9,24 @@ Boilerplate for projects with:
 - Jest
 - Nodemon
 
-Contains:
-- migrations folder
-- seeds folder
-- tests folder
-- views folder: partials folder and layouts folder 
-- index.js 
-- server.js
-- routes folder: routes.js
-- package.json
-- knexfile
+FIRST:
+`yarn` 
+`yarn knex migrate:lastest`
+`yarn knex seed:run`
+`yarn dev`
+
+NOTES:
+
+Routes:
+- are in a routes folder under routes.js initially
+
+Functions:
+- are under db.js initially
+
+Knex:
+- has an initial migration and seed file
+
+Handlebars:
+- contains views folder with layouts and partials folders
+- main is set up with `{{{body}}}`
+- index can be edited for home page
